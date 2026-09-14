@@ -2,7 +2,7 @@
 
 A weather-aware outfit recommendation web application designed to help you decide what to wear based on current and forecasted weather conditions.
 
-## Motivation
+## Objective
 
 Weather apps tell you what the weather is.
 
