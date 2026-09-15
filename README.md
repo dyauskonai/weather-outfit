@@ -11,6 +11,7 @@ Weather Outfit aims to combine simple weather conditions in your area with cloth
 **Developing**
 
 Currently working on the core weather-data layer and project architecture.
+Currently using data from open-meteo api
 
 ## Planned Features
 
@@ -31,7 +32,7 @@ Currently working on the core weather-data layer and project architecture.
 ### Current
 
 - Python
-- Open-Meteo API
+
 
 ### Planned
 
