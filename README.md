@@ -4,9 +4,7 @@ A weather-aware outfit recommendation web application designed to help you decid
 
 ## Objective
 
-Weather apps tell you what the weather is.
-
-Weather Outfit aims to bridge that gap by combining weather conditions with clothing recommendations focused on comfort.
+Weather Outfit aims to combine simple weather conditions in your area with clothing recommendations focused on comfort.
 
 ## Project Status
 
