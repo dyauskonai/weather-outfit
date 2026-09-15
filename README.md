@@ -1,6 +1,6 @@
 # Weather Outfit
 
-A weather-aware outfit recommendation web application designed to help you decide what to wear based on current and forecasted weather conditions.
+A weather aware outfit recommendation web application designed to help you decide what to wear based on current and forecasted weather conditions.
 
 ## Objective
 
