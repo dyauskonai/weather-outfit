@@ -1,6 +1,8 @@
 import requests
 from utils import get_wind_direction, weather_codes
 from weather import get_weather
+from comfort import build_environment_profile
+
 print("\n")
 try:
     data = get_weather()
@@ -14,13 +16,17 @@ try:
     weather_code = data["current"]["weather_code"]
     condition = weather_codes.get(weather_code, "Unknown weather condition")
     
-    
+    environment = build_environment_profile(apparent_temperature,wind_speed,precipitation)
+    print(build_environment_profile(35, 5, 0))
+    print(build_environment_profile(55, 20, 0.15))
+    print(build_environment_profile(90, 3, 0))
 
-    print(f"Current temperature in Santa Cruz: {temperature}°F")
-    print(f"Feels like: {int(apparent_temperature)}°F")
-    print(f"Precipitation: {precipitation:.2f} inches")
-    print(f"Wind Conditions: {wind_speed} mph from {wind_compass}")
-    print(f"Condition: {condition}")
+
+    # print(f"Current temperature in Santa Cruz: {temperature}°F")
+    # print(f"Feels like: {int(apparent_temperature)}°F")
+    # print(f"Precipitation: {precipitation:.2f} inches")
+    # print(f"Wind Conditions: {wind_speed} mph {wind_compass}")
+    # print(f"Condition: {condition}")
 
 
     print("\n")
