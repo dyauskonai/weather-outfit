@@ -13,19 +13,17 @@ Weather Outfit aims to combine simple weather conditions in your area with cloth
 Currently working on the core weather-data layer and project architecture.
 Currently using data from open-meteo api
 
-## Planned Features
+## Planned Features 
 
-- [ ] Current weather dashboard
-- [ ] Hourly weather forecast
-- [ ] Temperature and "feels like" analysis
-- [ ] Precipitation and wind analysis
-- [ ] Outfit recommendation engine
-- [ ] Personal wardrobe
-- [ ] Personalized recommendations
-- [ ] User feedback and recommendation improvement
-- [ ] Database
-- [ ] Full-stack web application
-- [ ] Deployment
+- Current weather dashboard
+- Temperature and "feels like" analysis
+- Precipitation and wind analysis
+- Outfit recommendation engine
+- Personal wardrobe
+- Personalized recommendations
+- User feedback and recommendation improvement
+- Database
+- Full-stack web application deployment
 
 ## Tech Stack
 
