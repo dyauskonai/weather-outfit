@@ -87,6 +87,7 @@ def rank_items(items, environment):
 
         scored_items.append({
             "name": item["name"],
+            "category": item["category"],
             "score": score,
         })
 
@@ -98,46 +99,16 @@ def rank_items(items, environment):
     return scored_items
 
 
-tshirt = {
-    "name": "T-shirt",
-    "primary_purpose": "general",
-    "warmth": 0.2,
-    "rain_protection": 0.0,
-    "wind_protection": 0.1,
-    "breathability": 0.9,
-}
+def rank_items_by_category(items, environment):
+    items_by_category = {}
 
-hoodie = {
-    "name": "Hoodie",
-    "primary_purpose": "warmth",
-    "warmth": 0.8,
-    "rain_protection": 0.2,
-    "wind_protection": 0.5,
-    "breathability": 0.3,
-}
+    for item in items:
+        category = item["category"]
+        items_by_category.setdefault(category, []).append(item)
 
-rain_shell = {
-    "name": "Rain Jacket",
-    "primary_purpose": "rain",
-    "warmth": 0.3,
-    "rain_protection": 1.0,
-    "wind_protection": 0.9,
-    "breathability": 0.5,
-}
+    ranked_by_category = {}
 
-light_jacket = {
-    "name": "Light jacket",
-    "primary_purpose": "general",
-    "warmth": 0.6,
-    "rain_protection": 0.4,
-    "wind_protection": 0.7,
-    "breathability": 0.5,
-}
+    for category, category_items in items_by_category.items():
+        ranked_by_category[category] = rank_items(category_items, environment)
 
-
-clothing_items = [
-    tshirt,
-    hoodie,
-    rain_shell,
-    light_jacket,
-]
+    return ranked_by_category
