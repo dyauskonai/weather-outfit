@@ -27,10 +27,7 @@ def get_weights(environment):
 def calculate_context_penalty(item, environment):
     penalty = 0.0
 
-    if (
-        item["primary_purpose"] == "rain"
-        and environment["rain_protection_need"] == 0
-    ):
+    if (item["primary_purpose"] == "rain" and environment["rain_protection_need"] == 0):
         penalty += 0.15
 
     return penalty
@@ -75,10 +72,7 @@ def score_item(item, environment):
 
     total_score = weighted_total / weight_sum
 
-    context_penalty = calculate_context_penalty(
-        item,
-        environment
-    )
+    context_penalty = calculate_context_penalty(item,environment)
 
     total_score -= context_penalty
 
