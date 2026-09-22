@@ -1,0 +1,86 @@
+.menu {
+  position: relative;
+  z-index: 5;
+  text-transform: none;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.trigger::-webkit-details-marker {
+  display: none;
+}
+
+.avatar {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid #d9c3f8;
+  border-radius: 50%;
+  background: #d9c3f8;
+  color: #17131d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.chevron {
+  color: #c5b6d2;
+  font-size: 18px;
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  width: min(260px, calc(100vw - 48px));
+  padding: 8px;
+  border: 1px solid #51405e;
+  border-radius: 8px;
+  background: #18121f;
+  box-shadow: 0 20px 50px #0008;
+  color: #f4f2f7;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.email {
+  margin: 4px 8px 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #403249;
+  color: #bfb2cc;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.panel a,
+.panel button {
+  display: block;
+  width: 100%;
+  padding: 11px 9px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.panel a:hover,
+.panel button:hover {
+  background: #352640;
+}
+
+.panel form {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #403249;
+}

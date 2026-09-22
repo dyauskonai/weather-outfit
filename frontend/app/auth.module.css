@@ -1,0 +1,33 @@
+.page { min-height: 100vh; padding: 24px 48px 60px; background: radial-gradient(circle at 80% 15%, #39204d 0, transparent 32%), #09090b; }
+.header { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 15px 20px; border: 1px solid #303036; border-radius: 8px; background: #0d0d10; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; letter-spacing: -0.6px; }
+.brand span { color: #c3a0f5; font-size: 28px; }
+.back { color: #c5b6d2; font-family: var(--font-geist-mono), monospace; font-size: 11px; text-transform: uppercase; }
+.back:hover, .switch a:hover { color: #d9c3f8; }
+.main { max-width: 470px; margin: 100px auto 0; }
+.eyebrow { margin: 0 0 18px; color: #c3a0f5; font-family: var(--font-geist-mono), monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+.main h1 { margin: 0; font-size: clamp(40px, 6vw, 62px); font-weight: 500; letter-spacing: -2.5px; line-height: 1.05; }
+.description { margin: 19px 0 35px; color: #b2a8bf; font-size: 15px; line-height: 1.7; }
+.panel { padding: 30px; border: 1px solid #403249; border-radius: 9px; background: #141019; }
+.form { display: grid; gap: 12px; }
+.form label { color: #d5c8df; font-size: 12px; }
+.form input { width: 100%; padding: 14px 15px; border: 1px solid #5a4a66; border-radius: 4px; background: #0b0a0e; color: #f4f2f7; font: inherit; font-size: 14px; }
+.form input::placeholder { color: #8f8499; }
+.form input:focus-visible { outline: 2px solid #c5a3ff; outline-offset: 2px; }
+.form button { margin-top: 14px; padding: 15px; border: 1px solid #f3eff8; border-radius: 4px; background: #f3eff8; color: #17131d; cursor: pointer; font: inherit; font-size: 13px; font-weight: 600; }
+.form button:hover { background: #d9c3f8; }
+.message { margin: 0 0 20px; padding: 13px; border: 1px solid #77618b; border-radius: 4px; color: #e4d0f3; font-size: 13px; line-height: 1.6; }
+.switch { margin: 24px 0 0; color: #a99db4; font-size: 13px; }
+.switch a { color: #f4f2f7; text-decoration: underline; text-underline-offset: 3px; }
+.account { display: grid; gap: 12px; }
+.accountLabel { color: #a99db4; font-family: var(--font-geist-mono), monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+.accountEmail { margin: 0; overflow-wrap: anywhere; font-size: 21px; }
+@media (max-width: 700px) {
+  .page { padding: 14px 18px 50px; }
+  .header { padding: 12px; }
+  .brand { font-size: 14px; }
+  .brand span { font-size: 24px; }
+  .back { font-size: 9px; }
+  .main { margin-top: 75px; }
+  .panel { padding: 23px; }
+}

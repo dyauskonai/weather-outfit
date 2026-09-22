@@ -1,0 +1,122 @@
+.page { max-width: 1600px; margin: 0 auto; padding: 24px 48px 0; }
+.header { animation: fadeIn 600ms ease-out 700ms both; }
+.hero .eyebrow { animation: riseIn 650ms ease-out 900ms both; }
+.hero h1 { animation: riseIn 750ms ease-out 1050ms both; }
+.heroDescription { animation: riseIn 650ms ease-out 1200ms both; }
+.hero .button { animation: fadeIn 650ms ease-out 1350ms both; }
+.heroNote { animation: fadeIn 650ms ease-out 1450ms both; }
+.atmosphere { animation: fadeIn 900ms ease-out 850ms both; }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.skipLink { position: fixed; top: 8px; left: 16px; z-index: 10; padding: 12px; background: white; color: black; transform: translateY(-160%); }
+.skipLink:focus { transform: translateY(0); }
+.header { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 15px 20px; border: 1px solid #303036; border-radius: 8px; background: #0d0d10; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 600; letter-spacing: -0.8px; }
+.brandMark { color: #c3a0f5; font-size: 30px; line-height: 1; }
+.nav { display: flex; align-items: center; gap: 32px; font-family: var(--font-geist-mono), monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+.nav a:hover, .footer > a:last-child:hover { color: #c3a0f5; }
+.navCta { padding: 11px 18px; border: 1px solid #f3eff8; border-radius: 3px; background: #f3eff8; color: #17131d; }
+.nav .navCta:hover { background: #d9c3f8; color: #17131d; }
+.navCta span { margin-left: 18px; }
+.hero { position: relative; isolation: isolate; min-height: 760px; padding: 94px 28px 85px; }
+.heroContent { position: relative; z-index: 1; }
+.eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 28px; color: #b3a5c7; font-family: var(--font-geist-mono), monospace; font-size: 10px; letter-spacing: 1.7px; text-transform: uppercase; }
+.statusDot { width: 6px; height: 6px; border-radius: 50%; background: #c3a0f5; box-shadow: 0 0 12px #b581ff; }
+.hero h1 { margin: 0; max-width: 850px; font-size: clamp(64px, 6.8vw, 108px); line-height: 1.01; letter-spacing: -6px; font-weight: 500; }
+.hero h1 span { color: #aaa5b1; }
+.heroDescription { margin: 30px 0; color: #bdb8c4; font-size: 17px; line-height: 1.65; }
+.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 45px; padding: 16px 20px; background: #f3eff8; color: #17131d; border: 1px solid #f3eff8; border-radius: 3px; font-size: 13px; font-weight: 600; transition: background 180ms, transform 180ms; }
+.button:hover { background: #d9c3f8; transform: translateY(-2px); }
+.heroNote { margin-top: 15px; color: #938b9f; font-size: 11px; }
+.atmosphere { position: absolute; z-index: -1; inset: 0 -48px; overflow: hidden; pointer-events: none; mask-image: linear-gradient(to bottom, black 75%, transparent); }
+.orbit, .orbitInner { position: absolute; top: 38px; right: -180px; width: 900px; height: 640px; border-radius: 50%; transform: rotate(-32deg); background: repeating-radial-gradient(ellipse at center, transparent 0 10px, #bd76fa65 11px 12px, transparent 13px 20px); mask-image: radial-gradient(ellipse at center, transparent 20%, black 44%, transparent 71%); opacity: 0.75; }
+.orbitInner { top: 145px; right: -50px; width: 620px; height: 380px; background: radial-gradient(ellipse, #a545d84d, transparent 65%); filter: blur(30px); animation: breathe 8s ease-in-out infinite alternate; }
+.grain { position: absolute; inset: 0; background-image: radial-gradient(#09090b 1px, transparent 1px); background-size: 4px 4px; }
+.forecastStamp { position: absolute; right: 48px; top: 380px; display: grid; gap: 16px; padding-left: 20px; border-left: 1px solid #8a65a8; }
+.forecastStamp > span { font-family: var(--font-geist-mono), monospace; font-size: 9px; letter-spacing: 1.3px; color: #c2a7d8; }
+.forecastStamp strong { font-size: 25px; font-weight: 400; letter-spacing: -0.8px; line-height: 1.25; }
+.heroFooter { position: absolute; bottom: 22px; left: 28px; right: 28px; display: flex; justify-content: space-between; gap: 20px; font-family: var(--font-geist-mono), monospace; font-size: 9px; letter-spacing: 1px; color: #9c94a7; }
+.howSection { padding: 75px 28px 82px; border-top: 1px solid #2b2830; }
+.sectionHeading h2, .previewIntro h2 { margin: 0; font-weight: 400; font-size: clamp(30px, 3.3vw, 47px); line-height: 1.18; letter-spacing: -1.8px; }
+.sectionHeading h2 span, .previewIntro h2 span { color: #938b9f; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 42px; margin-top: 52px; }
+.step { border-top: 1px solid #35303d; padding-top: 20px; }
+.stepNumber { font-family: var(--font-geist-mono), monospace; color: #b493df; font-size: 11px; }
+.step h3 { margin: 26px 0 12px; font-size: 17px; font-weight: 500; letter-spacing: -0.4px; }
+.step p { margin: 0; max-width: 320px; color: #a29aaa; font-size: 14px; line-height: 1.8; }
+.previewSection { display: grid; grid-template-columns: 1fr 1.1fr; gap: 85px; align-items: center; padding: 80px 28px 100px; border-top: 1px solid #2b2830; }
+.previewIntro > p:not(.eyebrow) { max-width: 330px; margin: 26px 0 0; color: #b2a9be; font-size: 15px; line-height: 1.8; }
+.previewIntro > p.demoNote { color: #938b9f; font-size: 12px; border-left: 1px solid #5a416f; padding-left: 14px; }
+.previewCard { min-width: 0; padding: 26px; background: linear-gradient(130deg, #19141f, #0e0d11 65%); border: 1px solid #403249; border-radius: 10px; box-shadow: 0 15px 100px #8e46c20a; }
+.cardTop, .outfitHeading { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: var(--font-geist-mono), monospace; font-size: 9px; letter-spacing: 1px; color: #b7a8c6; }
+.sampleBadge { border: 1px solid #4b3d59; padding: 5px 7px; border-radius: 3px; font-size: 8px; }
+.scenarioButtons { display: flex; gap: 6px; margin: 24px 0; }
+.scenarioButtons button { cursor: pointer; border: 1px solid #3d3347; background: transparent; color: #b7adbf; padding: 7px 14px; border-radius: 4px; font-size: 11px; }
+.scenarioButtons button[aria-pressed="true"] { background: #d9c0f7; border-color: #d9c0f7; color: #23162d; }
+.scenarioButtons button:hover { border-color: #c3a0f5; }
+.weatherReading { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-bottom: 28px; }
+.temperature { font-size: 66px; font-weight: 400; letter-spacing: -4px; line-height: 1; }
+.temperature small { font-size: 22px; letter-spacing: 0; color: #a899b7; }
+.weatherReading p { font-size: 11px; margin: 14px 0 0; color: #ad9fba; }
+.weatherSymbol { font-size: 65px; color: #caa4f1; line-height: 1; }
+.outfitHeading { padding: 17px 0; border-top: 1px solid #332a3d; font-size: 8px; }
+.outfitList { list-style: none; padding: 0; margin: 0; }
+.outfitList li { display: grid; grid-template-columns: 85px 1fr 12px; gap: 10px; align-items: center; padding: 15px 0; border-top: 1px solid #292330; }
+.outfitList li > span { color: #a89ab7; font-size: 10px; }
+.outfitList strong { font-size: 12px; font-weight: 400; }
+.reason { display: flex; gap: 10px; min-height: 62px; margin: 15px 0 0; padding: 13px; background: #22192c; border-radius: 4px; font-size: 11px; line-height: 1.65; color: #c7b8d6; }
+.reason > span { font-size: 18px; color: #c3a0f5; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 30px 28px; border-top: 1px solid #2b2830; }
+.footer p, .footer > a:last-child { font-size: 10px; color: #9c94a7; }
+@keyframes breathe { from { opacity: 0.5; } to { opacity: 1; } }
+@media (max-width: 1000px) {
+  .page { padding: 20px 24px 0; }
+  .hero h1 { font-size: 78px; letter-spacing: -4px; }
+  .forecastStamp { right: 10px; top: 430px; }
+  .previewSection { gap: 35px; }
+  .steps { gap: 25px; }
+  .footer p { display: none; }
+}
+@media (max-width: 700px) {
+  .page { padding: 14px 18px 0; }
+  .header { padding: 12px; gap: 12px; }
+  .brand { font-size: 15px; gap: 6px; }
+  .brandMark { font-size: 25px; }
+  .nav { font-size: 9px; }
+  .navCta { padding: 9px 12px; }
+  .navCta span { margin-left: 4px; }
+  .hero { min-height: 690px; padding: 80px 5px 100px; }
+  .hero h1 { font-size: clamp(49px, 11vw, 76px); letter-spacing: -3px; }
+  .eyebrow { font-size: 8px; letter-spacing: 1px; }
+  .heroDescription { font-size: 15px; }
+  .atmosphere { inset: 0 -18px; }
+  .orbit { right: -520px; top: 80px; opacity: 0.45; }
+  .orbitInner { right: -320px; }
+  .forecastStamp { display: none; }
+  .heroFooter { left: 5px; right: 5px; font-size: 8px; line-height: 1.8; }
+  .heroFooter > span { max-width: 160px; }
+  .howSection { padding: 50px 5px; }
+  .sectionHeading h2, .previewIntro h2 { font-size: 32px; letter-spacing: -1px; }
+  .steps { grid-template-columns: 1fr; gap: 30px; margin-top: 35px; }
+  .step h3 { margin-top: 15px; }
+  .step p { max-width: none; }
+  .previewSection { grid-template-columns: 1fr; padding: 50px 5px; gap: 35px; }
+  .previewCard { padding: 19px; }
+  .outfitList li { grid-template-columns: 64px 1fr 12px; gap: 6px; }
+  .footer { padding: 25px 5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header, .hero .eyebrow, .hero h1, .heroDescription, .hero .button, .heroNote, .atmosphere { animation: none; }
+  .orbitInner { animation: none; }
+  .button { transition: none; }
+  .button:hover { transform: none; }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .atmosphere { inset: 0 -24px; }
+}
